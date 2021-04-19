@@ -19,7 +19,7 @@ function addTodo(event){
 
     //Criar li
     const newTodo = document.createElement('li');
-    newTodo.innerText = "Aprendendo..";
+    newTodo.innerText = todoInput.value;
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
 
@@ -32,9 +32,12 @@ function addTodo(event){
 
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add("complete-btn");
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
 
     //Append
     todoList.appendChild(todoDiv);
+
+    //Limpar o input do todo
+    todoInput.value = "";
 }
